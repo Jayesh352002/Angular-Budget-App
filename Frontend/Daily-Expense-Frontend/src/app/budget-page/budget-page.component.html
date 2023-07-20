@@ -1,0 +1,70 @@
+<div>
+  <div class="container-fluid">
+    <div class="income-section">
+      <form>
+        <input
+          type="number"
+          class="form__field"
+          placeholder="Name"
+          name="name"
+          id="name"
+          required
+          [(ngModel)]="income"
+        />
+        <button class="btn btn-outline-danger" (click)="addincome(income)">
+          Add Income
+        </button>
+      </form>
+      <p>Total Income : {{ Finalincome }}</p>
+    </div>
+  </div>
+</div>
+
+<div class="expense-section">
+  <h2>Total Expense</h2>
+  <form>
+    <input
+      style="
+        margin-top: 16px;
+        margin-left: 15px;
+        width: 300px;
+        border: 0;
+        border-bottom: 1px solid black;
+        outline: none;
+        background-color: white;
+      "
+      type="text"
+      class="form__field"
+      placeholder="Expense Title"
+      name="name"
+      id="name"
+      required
+      [(ngModel)]="title"
+    />
+    <input
+      style="
+        margin-top: 16px;
+        margin-left: 15px;
+        width: 300px;
+        border: 0;
+        border-bottom: 1px solid black;
+        outline: none;
+        background-color: white;
+      "
+      type="number"
+      class="form__field"
+      placeholder="Price"
+      name="name"
+      id="name"
+      required
+      [(ngModel)]="price"
+    />
+    <button
+      type="button"
+      class="btn btn-outline-dark"
+      (click)="addexp(title, price)"
+    >
+      Add Expense
+    </button>
+  </form>
+</div>
